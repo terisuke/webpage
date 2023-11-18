@@ -10,12 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@alpinejs/collapse": "3.12.3",
+    "@alpinejs/collapse": "^3.13.2",
     "@astrojs/check": "^0.3.1",
     "@astrojs/tailwind": "4.0.0",
     "@fontsource/inter": "5.0.8",
-    "@types/alpinejs": "3.7.2",
-    "alpinejs": "3.12.3",
+    "alpinejs": "^3.12.3",
     "astro": "2.10.13",
     "astro-compress": "2.0.14",
     "prettier": "3.0.2",
@@ -23,5 +22,8 @@
     "prettier-plugin-tailwindcss": "0.5.3",
     "tailwindcss": "3.3.3",
     "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@types/alpinejs": "^3.13.5"
   }
 }

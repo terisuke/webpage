@@ -1,19 +1,22 @@
 ---
 const team = [
   {
-    name: 'Floyd Lowe',
-    image: '/assets/team-1.webp',
-    job: 'Senior Designer',
+    name: 'Kousuke Terada',
+    image: '/assets/k-terada.webp',
+    job: 'CEO',
+    comingSoon: false,
   },
   {
-    name: 'Emma Dorsey',
-    image: '/assets/team-2.webp',
-    job: 'Principal Designer',
+    name: 'Coming Soon...',
+    image: '/assets/coming-soon.webp',
+    job: '',
+    comingSoon: true,
   },
   {
-    name: 'Emily Mitchell',
-    image: '/assets/team-3.webp',
-    job: 'Senior Developer',
+    name: 'Coming Soon...',
+    image: '/assets/coming-soon.webp',
+    job: '',
+    comingSoon: true,
   },
 ];
 ---
@@ -25,12 +28,12 @@ const team = [
       <ul role="list" class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {
           team.map((item) => (
-            <li class="border-primary-900/10 dark:border-primary-300/10 rounded-3xl border px-6 py-8">
+            <li class={`border-primary-900/10 dark:border-primary-300/10 rounded-3xl border px-6 py-8 ${item.comingSoon ? 'bg-gray-200 dark:bg-gray-700' : ''}`}>
               <div class="space-y-6">
                 <img class="mx-auto h-auto w-16 rounded-full" src={item.image} alt={item.name} />
                 <div class="text-center">
-                  <h3 class="text-lg font-medium">{item.name}</h3>
-                  <p class="text-primary-950/70 dark:text-primary-200/70 text-base">{item.job}</p>
+                  <h3 class="text-lg font-medium">{item.comingSoon ? 'Coming Soon...' : item.name}</h3>
+                  <p class={`text-primary-950/70 dark:text-primary-200/70 text-base ${item.comingSoon ? 'hidden' : ''}`}>{item.job}</p>
                 </div>
               </div>
             </li>
